@@ -10,11 +10,13 @@ int	sch_wds(char *str1, char *str2)
 	while(str2[j])
 	{
 		if(str1[i] == str2[j])
+		{
 			i++;
+			if(str1[i] == '\0')
+				return(1);
+		}
 		j++;
 	}
-	if(str1[i] == '\0' && str2[j] == '\0')
-		return(1);
 	return(0);
 }
 int	main(int argc, char **argv)
